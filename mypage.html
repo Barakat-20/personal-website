@@ -1,0 +1,28 @@
+<html>
+<body>
+    <div id="title">
+        <h1>Faidat</h1>
+        <p>Welcome!</p>
+        <button onclick="clickme()">click me</button>
+    </div>
+</body>
+</html>
+
+<style>
+    div{
+        text-align: center; margin-top: 50px;
+    }
+    body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggGGjq-ecHM-a2rm2ZhKO3wvU2RPz34OWMg&s");
+    background-size: cover; }
+    h1{color:aqua}
+    button:hover{color:rgb(162, 109, 109); 
+    background-color:rgb(92, 89, 89);font-size: 1.1em;
+    cursor: pointer;}
+</style>
+
+<script>
+   function clickme() {
+        document.body.style.background = 'url("https://media.tenor.com/rIicIkDGPE8AAAA1/forrest-gump-on-my-way.webp")'
+        document.getElementById("title").style.visibility ="hidden";
+   }
+</script>
