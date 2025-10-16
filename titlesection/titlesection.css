@@ -1,11 +1,11 @@
  #title{
         text-align: center;
         padding-top: 20px;
-}
+        background-image: url("https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2xlYW4lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000");
+        background-position: center top;
+    }
 
-body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggGGjq-ecHM-a2rm2ZhKO3wvU2RPz34OWMg&s");
-    background-size: cover;
-}
+
 
 h1{color:aqua}
 
