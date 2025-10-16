@@ -17,13 +17,20 @@
 .icons{
     font-size: 25px;
     margin-top: 30px;
-    
+    margin-bottom: 15px;
+}
+.icons > a{
+    text-decoration: none;
 }
 .icon{
     margin: 5px;
     color:var(--titleSectionSecondaryColor)
+    
 }
 .icon:hover{
     cursor: pointer;
     color: var(--titleSectionTertiaryColor)
+}
+.cv > a{
+    color: black;
 }
