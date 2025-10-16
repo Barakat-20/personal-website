@@ -1,5 +1,6 @@
- div{
-        text-align: center; 
+ #title{
+        text-align: center;
+        padding-top: 20px;
 }
 
 body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggGGjq-ecHM-a2rm2ZhKO3wvU2RPz34OWMg&s");
