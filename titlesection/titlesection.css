@@ -1,9 +1,9 @@
  div{
-        text-align: center; margin-top: 50px;
+        text-align: center; 
 }
 
 body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggGGjq-ecHM-a2rm2ZhKO3wvU2RPz34OWMg&s");
-    background-size: cover; 
+    background-size: cover;
 }
 
 h1{color:aqua}
