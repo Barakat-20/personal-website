@@ -8,3 +8,8 @@
 .description{
    text-align: justify;
 }
+@media screen and (max-width: 600px) {
+    div.example {
+        display: none
+    }  
+}
