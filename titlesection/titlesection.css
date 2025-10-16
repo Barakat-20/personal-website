@@ -18,6 +18,12 @@
     border-radius: 5px;
 }
 
+.margin1{
+    margin-bottom: -17px;
+}
+.margin2{
+    margin-bottom:30px ;
+}
 
 h1{color: var(--titleSectionPrimaryColor)}
 
