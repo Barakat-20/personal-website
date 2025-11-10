@@ -53,14 +53,18 @@
     <div class="main" id="craps-game">
         <h2 class="craps-game-title">Craps Casino Game</h2>
         <div class="craps-game-container">
-            <div class="craps-game-registration">
+            <div id="craps-game-registration">
                 <div>
                     Enter username to begin
-                    <div>
-                        <input class="craps-registration-input" id="craps-username-input">
-                    </div>
-                    <div class="craps-registration-continue" onclick="registerCrapsPlayer()">Continue</div>
                 </div>
+                <div>
+                    <input class="craps-registration-input" id="craps-username-input">
+                </div>
+                <div class="craps-registration-continue" onclick="registerCrapsPlayer()">Continue
+                </div>
+            </div>
+            <div id="craps-main-section">
+                MAIN SECTION HERE
             </div>
         </div>
     </div>
@@ -85,14 +89,12 @@
         padding: 25px;
     }
 </style>
+<script src="crapsgame/crapsgame.js"></script>
+
 <script>
    function clickme() {
        // document.body.style.background = 'url("https://media.tenor.com/rIicIkDGPE8AAAA1/forrest-gump-on-my-way.webp")'
         //document.getElementById("title").style.visibility ="hidden";
-   }
-
-   function registerCrapsPlayer() {
-        let crapsUsername = alert(document.getElementById("craps-username-input").value)
    }
 </script>
 
