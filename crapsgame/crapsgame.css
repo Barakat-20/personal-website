@@ -41,3 +41,13 @@
 #craps-main-section {
     display: none;
 }
+.craps-main-section-starts{
+    text-align: center;
+    margin-top: 70px;
+}
+#craps-starts-money-container {
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    
+}
