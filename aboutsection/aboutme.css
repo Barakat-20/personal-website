@@ -1,9 +1,12 @@
 #aboutme{
     text-align: center;
+    overflow-x: hidden;
 }
 .container{
-    width: 65%;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 40px 0 ;
 }
 .description{
    text-align: justify;
