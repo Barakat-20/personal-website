@@ -1,3 +1,14 @@
+.main {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 50px 0;
+    clear: both;
+}
+
+body, html {
+    overflow-x: hidden;
+}
 #aboutme{
     text-align: center;
     overflow-x: hidden;
