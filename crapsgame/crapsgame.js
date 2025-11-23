@@ -3,7 +3,11 @@ let crapsUsername = ""
 
 //Craps Game Settings
 const startingMoney = 1000
-const startingRounds = 10
+const startingRounds = 0
+const bets ={
+    even: "EVEN",
+    odd: "ODD" 
+}
 
 // HTML Element IDs
 const crapsUsernameInput = "craps-username-input"
@@ -16,6 +20,7 @@ const crapsStartsRounds = "craps-starts-rounds"
 //In-games variables
 let currentMoney = startingMoney
 let currentRounds = startingRounds
+let currentBet = bets.even
 
 function registerCrapsPlayer() {
     crapsUsername = document.getElementById(crapsUsernameInput).value 
@@ -32,15 +37,16 @@ function registerCrapsPlayer() {
         alert("Username must be at least five characters long, alphanumeric only, no spaces, and cannot start with a number!")
     }
     else{
-    removeRegistrctionPane ()
+    removeRegistrationPane ()
     showMainGameSection ()
     setupFirstRound ()
+    betEven()
     }
 
     
 }
 
-function removeRegistrctionPane (){
+function removeRegistrationPane (){
     document.getElementById(crapsGameRegistration).style.display = "none"
 }
 
@@ -62,5 +68,21 @@ function setMoney (money){
 
 function setRounds (round){
     document.getElementById(crapsStartsRounds).innerHTML = round
+}
+
+function betEven () {
+    chooseBet(bets.even)
+}
+
+function betOdd () {
+    chooseBet(bets.odd)
+}
+
+
+function chooseBet (bet) {
+    currentBet = bet
+    document.getElementById(bet).style.backgroundColor = "red"
+    const deselectBet = bet == bets.even ? bets.odd : bets.even
+    document.getElementById(deselectBet).style.backgroundColor = "transparent"
 }
 

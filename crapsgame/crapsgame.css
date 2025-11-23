@@ -72,4 +72,5 @@
     position: absolute;
     bottom: calc(var(--height-scale) * 0.04);
     font-size: calc(var(--height-scale) * 0.05);
+    border: solid blue 2px;
 }
