@@ -1,23 +1,21 @@
-.main {
-    width: 100%;
-    display: block;
-    position: relative;
-    padding: 50px 0;
-    clear: both;
-}
-
-body, html {
-    overflow-x: hidden;
+:root {
+    --width-scale: min(500px, 80vw, 80vh);
+    --height-scale: calc(var(--width-scale) * 0.8);
+    --aboutme-size: min(calc(var(--height-scale) * 0.1)), 2em;
+    --aboutme-margin-bottom: calc(var(--height-scale) * 0.25);
 }
 #aboutme{
     text-align: center;
-    overflow-x: hidden;
+    
 }
 .container{
-    width: 90%;
-    max-width: 800px;
+    width: var(--width-scale);
+    height: var(--height-scale);
     margin: 0 auto;
     padding: 40px 0 ;
+    font-size: calc(var(--aboutme-size) * 0.25);
+    margin-top: calc(calc(100vh - var(--aboutme-size) - var(--aboutme-margin-bottom) - var(--height-scale)) / 1.5);
+    margin-bottom: var(--aboutme-margin-bottom);
 }
 .description{
    text-align: justify;
@@ -29,9 +27,9 @@ body, html {
     }  
 }
 .icons{
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: calc(var(--height-scale) * 0.08);
+    margin-top: calc(var(--height-scale) * 0.15);
+    margin-bottom: var(--aboutme-margin-bottom);
 }
 .icons > a{
     text-decoration: none;
@@ -44,6 +42,11 @@ body, html {
 .icon:hover{
     cursor: pointer;
     color: var(--titleSectionTertiaryColor)
+}
+.cv{
+    font-size: calc(var(--height-scale) * 0.05);
+    margin-top: calc(var(--height-scale) * 0.025);
+    
 }
 .cv > a{
     color: black;
