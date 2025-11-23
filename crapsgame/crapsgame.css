@@ -27,6 +27,7 @@
     background-image: url('../images/hush-naidoo-jade-photography-ax_jJpHdYjI-unsplash.jpg');
     background-size: cover;
     background-position: center top;
+    position: relative;
 }
 #craps-game-registration {
     text-align: center;
@@ -53,6 +54,7 @@
 }
 #craps-main-section {
     display: none;
+    height: 100%;
 }
 .craps-main-section-starts{
     text-align: center;
@@ -63,4 +65,11 @@
     font-size: calc(var(--height-scale) * 0.1);
     margin-top: calc(var(--height-scale) * 0.05);
     
+}
+.craps-round-manager{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: calc(var(--height-scale) * 0.04);
+    font-size: calc(var(--height-scale) * 0.05);
 }
