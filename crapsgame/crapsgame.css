@@ -25,7 +25,7 @@
     height: var(--height-scale);
     border: solid white 2px;
     margin: 0 auto;
-    background-image: url('../images/joshua-fernandez-Yj399Kq9a8E-unsplash.jpg');
+    background-image: url('../images/hush-naidoo-jade-photography-ax_jJpHdYjI-unsplash.jpg');
     background-size: cover;
     background-position: center top;
     position: relative;
@@ -104,6 +104,12 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+#craps-roll-dice-animation-container{
+    margin-top: calc(var(--height-scale) * -0.1);
+    margin-left: calc(var(--height-scale) * -0.2);
+}
+
 .craps-betting-grid{
     display: grid;
     grid-template-columns: 33% auto 33%;
