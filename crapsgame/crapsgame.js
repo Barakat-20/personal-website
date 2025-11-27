@@ -110,7 +110,7 @@ function rollDice() {
     const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
 }
-
+window.addEventListener("resize", formatDiceScale);
 function formatDiceScale () {
     const vw = window.innerWidth * 0.8
     const vh= window.innerHeight * 0.8
@@ -120,7 +120,7 @@ function formatDiceScale () {
     
     document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
-window.addEventListener("resize", formatDiceScale);
+
 
 function processDiceResult (diceResult) {
     console.log(diceResult)
