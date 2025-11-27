@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="crapsgame/crapsgame.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Armata" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <script src="https://kit.fontawesome.com/1fe1b7d9e4.js" crossorigin="anonymous"></script>
     </head>
 <body>
     <div class="main" id="title">
@@ -75,17 +76,22 @@
                         Rounds: <span id="craps-starts-rounds"></span>
                     </div>
                 </div>
+                <div class="craps-on-table-container">
+                    <div class="craps-roll-dice-container">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                </div>
                 <div class="craps-round-manager">
-                    <div id="EVEN" onclick="betEven()">
-                        EVEN
-                    </div>
-                    <div id="ODD" onclick="betOdd()">
-                        ODD
-                    </div>
-                    <div>
-                        <span onclick="decreaseBet()">-</span>
-                        <span id="craps-user-bet-amount">$100</span>
-                        <span onclick="increaseBet()">+</span>
+                    <div class="craps-betting-grid">
+                        <div class="craps-bet-button" id="EVEN" onclick="betEven()">
+                            EVEN
+                        </div>
+                        <div class="craps-bet-amount-container">
+                            <span class="craps-user-bet-amount-change" onclick="decreaseBet()">-</span>
+                            <span id="craps-user-bet-amount">$100</span>
+                            <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
+                        </div>
+                        <div class="craps-bet-button" id="ODD" onclick="betOdd()">
+                            ODD
+                        </div>
                     </div>
                 </div>
             </div>
