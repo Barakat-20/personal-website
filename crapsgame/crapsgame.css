@@ -152,11 +152,18 @@
     border: solid white 2px;
     border-radius: 5px;
     white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: calc(var(--height-scale) * 0.04);
 }
 #craps-round-finish-message{
     padding: calc(var(--height-scale) * 0.015);
     border-right: solid white 2px;
     border-left: solid white 2px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+#craps-next-round-button-disabled{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: grey;
+}
+#craps-next-round-button-disabled:hover{
+    cursor: not-allowed;
 }
