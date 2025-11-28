@@ -1,53 +1,38 @@
-:root {
-    --width-scale: min(500px, 80vw, 80vh);
-    --height-scale: calc(var(--width-scale) * 0.8);
-    --aboutme-size: min(calc(var(--height-scale) * 0.1)), 2em;
-    --aboutme-margin-bottom: calc(var(--height-scale) * 0.25);
-}
 #aboutme{
     text-align: center;
     
 }
-.container{
-    width: var(--width-scale);
-    height: var(--height-scale);
+.text-block-container{
+    width: 65%;
     margin: 0 auto;
     padding: 40px 0 ;
-    font-size: calc(var(--aboutme-size) * 0.25);
-    margin-top: calc(calc(100vh - var(--aboutme-size) - var(--aboutme-margin-bottom) - var(--height-scale)) / 1.5);
-    margin-bottom: var(--aboutme-margin-bottom);
 }
-.description{
+.aboutme-section-description{
    text-align: justify;
-   margin-top: 30px;
+   margin-top: 40px;
 }
 @media screen and (max-width: 600px) {
-    div.example {
-        display: none
+    .text-block-container {
+        width: 100%
     }  
 }
-.icons{
-    font-size: calc(var(--height-scale) * 0.08);
-    margin-top: calc(var(--height-scale) * 0.15);
-    margin-bottom: var(--aboutme-margin-bottom);
+.aboutme-icons{
+    font-size:25px;
+    margin-top: 45px;
+    margin-bottom: 25px;
 }
-.icons > a{
+.aboutme-icons > a{
     text-decoration: none;
 }
-.icon{
-    margin: 5px;
+.aboutme-icon{
+    margin: 10px;
     color:var(--titleSectionSecondaryColor)
     
 }
-.icon:hover{
+.aboutme-icon:hover{
     cursor: pointer;
     color: var(--titleSectionTertiaryColor)
 }
-.cv{
-    font-size: calc(var(--height-scale) * 0.05);
-    margin-top: calc(var(--height-scale) * 0.025);
-    
-}
-.cv > a{
+.aboutme-download-link > a{
     color: black;
 }
