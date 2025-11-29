@@ -34,7 +34,7 @@
 #craps-game-registration {
     text-align: center;
     margin-top: calc(var(--height-scale) * 0.1);
-    font-size:calc(var(--game-title-size) * 0.25);
+    font-size: calc(var(--height-scale) * 0.05);
 }
 
 .craps-registration-input {
@@ -45,7 +45,7 @@
     color: white;
     text-align: center;
     margin: calc(var(--height-scale) * 0.055) 0;
-    font-size:calc(var(--game-title-size) * 0.25s);
+    font-size: calc(var(--height-scale) * 0.05);
 }
 
 .craps-registration-input:focus {
