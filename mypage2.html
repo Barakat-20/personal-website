@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <div id="best">
+        <h2>Welcome to Success!</h2>
+        <P>This is Faidat.</P>
+        <button onclick="clickhere()">
+            click here
+        </button>
+        </div>
+
+        <style>
+            body{
+                text-align: center; 
+                background-color: rgb(83, 78, 78);
+            }
+            h2{
+                color:aquamarine
+            }
+            p{
+                color: aqua;
+            }
+            button:hover{
+                color: rgb(190, 70, 70);
+                background-color: grey;
+                border-radius: 5px;
+                font-size: 1.05em;
+                cursor: pointer;
+            }
+            button{
+                border-radius: 5px;
+                
+            }
+        </style>
+
+        <script>
+            function clickhere() {
+                alert("You have succeeded✨.")
+                document.body.style.background = 'url("https://media.tenor.com/cliP7iEg108AAAA1/success-stephen-colbert.webp")';
+                document.getElementById("best").style.visibility ="hidden"
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    color:white;
+    padding: 30px, 50px;
+    font-family: Verdana;
+    display: flex;
+    justify-content: center;
+    background-color:hsla(0, 2%, 32%, 0.717)
+    
+    
+}
+table{
+    text-align: center;  border:white;
+     border-collapse: collapse; border-width: 3px;
+     width: 400px; margin-left: auto; margin-right: auto;
+     margin-top: 50px;
+     
+     
+}
+#header{
+    background-color: red;
+}
+#dd{
+    text-align: center; 
+}
+#sign{
+    text-align: center;
+    padding: 30px, 50px;
+}
+table, th, td{
+    border: 2px solid;
+}
+caption{
+    caption-side: bottom;  padding: 0; text-align: center;
+}
+#c{
+    text-align: center;
+    margin-top: 70px;
+   font-size: 1.2em;
+   font-stretch: expanded;
+   letter-spacing: 11px;
+   word-spacing: 5px;
+   white-space: nowrap;
+   padding: 0;
+}
