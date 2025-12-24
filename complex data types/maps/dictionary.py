@@ -44,9 +44,12 @@ import datetime
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-ageInDays = None
-ageInMonths = None
-ageInYears = None
+dateOfBirth = datetime.datetime(getMyAge["DOB"]["year"], getMyAge["DOB"]["month"], getMyAge["DOB"]["day"])
+currentDate = datetime.datetime.now()
+
+ageInDays = (currentDate - dateOfBirth).days
+ageInMonths = ageInDays / 12
+ageInYears = ageInDays / 365
 
 ########################################################################
 
@@ -117,6 +120,15 @@ studentCopy = dict(student)
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
+student["grade"] += 1
+student["gpa"] -= 0.15
+
+newCourse = {
+	"subject": "MATH",
+	"level": 204,
+}
+student["courses"].append(newCourse)
+student["absences"] = 1
 
 ########################################################################
 
