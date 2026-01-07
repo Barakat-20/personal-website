@@ -21,7 +21,6 @@ function randomNumber(array) {
 }
 
 async function getNewRandomQuote() {
-  try {
     const response = await fetch("https://api.api-ninjas.com/v1/quotes", {
       method: "GET",
       headers: { "X-Api-Key": apiKey }
@@ -31,22 +30,14 @@ async function getNewRandomQuote() {
 
     const data = await response.json();
 
-    // API Ninjas returns an object, not array
+   
     const quoteText = data[0].quote;
     const quoteAuthor = data[0].author;
-
-    // Pick a random color combo
-    const colorCombo = randomNumber(colors);
-
-    // Update the DOM
-    const container = document.getElementById("random-quote-generator");
-    container.style.background = `linear-gradient(45deg, ${colorCombo[0]}, ${colorCombo[1]})`;
-
     document.getElementById("random-quote-text").innerHTML = quoteText;
     document.getElementById("random-quote-author").innerHTML = quoteAuthor;
-
-  } catch (error) {
-    console.error("Error fetching quote:", error);
-    alert("Error fetching quote! Check console.");
-  }
+  
+    const colorCombo = randomNumber(colors);
+    const container = document.getElementById("random-quote-generator");
+    container.style.background = `linear-gradient(45deg, ${colorCombo[0]}, ${colorCombo[1]})`;
+ 
 }
