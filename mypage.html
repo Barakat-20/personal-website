@@ -1,14 +1,15 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="titlesection/titlesection.css">
-        <link rel="stylesheet" href="aboutsection/aboutme.css">
-        <link rel="stylesheet" href="crapsgame/crapsgame.css">
+        <link rel="stylesheet" href="./titlesection/titlesection.css">
+        <link rel="stylesheet" href="./aboutsection/aboutme.css">
+        <link rel="stylesheet" href="./crapsgame/crapsgame.css">
+        <link rel="stylesheet" href="./randomQuoteGenerator/randomQuoteGenerator.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Armata" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <script src="https://kit.fontawesome.com/1fe1b7d9e4.js" crossorigin="anonymous"></script>
     </head>
-<body>
+<body onload="getNewRandomQuote()">
     <div class="main-section" id="title">
         <h1 class="title-section-header">Faidat</h1>
         <p class="title-section-subtitle">Welcome!</p>
@@ -116,6 +117,15 @@
             </div>
         </div>
     </div>
+    <div class="main" id="random-quote-generator">
+        <div>
+            <div id="random-quote-title">RANDOM QUOTE GENERATOR</div>
+            <div id="random-quote-text"></div>
+            <div id="random-quote-author"></div>
+            <div id="new-random-quote"  onclick="getNewRandomQuote()">New Quote</div>
+        </div>
+    </div>
+    
    
 </body>
 </html>
@@ -141,7 +151,8 @@
         padding: 120px 30px;
     }
 </style>
-<script src="crapsgame/crapsgame.js"></script>
+<script src="./crapsgame/crapsgame.js"></script>
+<script src="./randomQuoteGenerator/randomQuoteGenerator.js"></script>
 <script type="text/javascript" src="https://unpkg.com/roll-a-die@2.0.1/dist/roll-a-die.js"></script>
 <script>
    function clickme() {
