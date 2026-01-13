@@ -14,6 +14,7 @@ async function analyzeStock() {
         alert('There was a problem getting the analysis for your stock');
     }
     const data = await response.json()
+    
     console.log(data)
     document.getElementById('stock-analysis-dashboard-data').innerHTML = JSON.stringify(data)
 }
