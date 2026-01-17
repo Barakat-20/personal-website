@@ -32,7 +32,7 @@ export const VerticalAlignContent = styled.div`
 export const DashboardGridContainer = styled.div`
     width: 80%;
     margin: 0 auto;
-    border: 3px solid green;
+    border: 1px solid green;
 `
 export const DashboardGridContent = styled.div`
     background-color: white;
