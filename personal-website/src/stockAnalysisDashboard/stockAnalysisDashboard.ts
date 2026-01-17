@@ -23,7 +23,6 @@ export const VerticalAlignContainer = styled.div`
     height: 100%;
     display: table;
     color: white;
-    font-size: 15px;
 
 `
 export const VerticalAlignContent = styled.div`

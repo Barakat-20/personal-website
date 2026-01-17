@@ -12,7 +12,8 @@ const NumberDisplay = styled.div`
 `
 const LabelDisplay = styled.div`
   font-weight: bold;
-  font-size: 12px
+  font-size: 12px;
+  color: black; 
 `
 function  NumberStat({value, label, center}:{value: number, label: string, center?:boolean}) {
 
