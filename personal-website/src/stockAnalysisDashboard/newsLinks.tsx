@@ -32,6 +32,7 @@ const ScrollableList = styled.div`
 
 const NewsListContainer = styled.div`
   max-width: 100%;
+  max-height: 100%
 `
 
 const NewsList: React.FC<NewsListProps> = ({ newsLinks }) => {
