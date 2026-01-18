@@ -9,33 +9,35 @@ import { ThemeGreen, ThemeRed, ThemeYellow } from "./stockAnalysisDashboard"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
-const FlexContainer = styled.div`
-  display: flex;
+const ChartContainer = styled.div`
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
 `;
+
 
 const ChartWrapper = styled.div`
   width: 45%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: 1px solid red;
+  align-items: center;
+  justify-content: left;
 `;
+
+
 
 interface NewsSentimentAnalysisProps {
   newsTextAnalysis: any;
 }
 
-const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = ({
-  newsTextAnalysis,
-}) => {
 
+const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = ({newsTextAnalysis}) => {
+  
   const sentiment = newsTextAnalysis.data.sentiment
-
   const data = {
-    labels: ["Positive", "Negative", "Neutral"],
+    labels: ['Positive', 'Negative', 'Nuetral'],
     datasets: [
       {
         label: 'Sentiment',
@@ -45,51 +47,54 @@ const NewsSentimentAnalysis: React.FC<NewsSentimentAnalysisProps> = ({
     ],
   };
 
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "bottom" as const,
-        labels: {
-          boxWidth: 10,
-          padding: 10,           
-          font: {
-            size: 10,
-          },
+
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: "bottom" as const,
+      align: "center" as const,
+      maxHeight: 70,
+      labels: {
+        boxWidth: 3,
+        boxHeight: 6,
+        padding: 5,
+        font: {
+          size: 10,
         },
+        usePointStyle: true,
       },
     },
-  };
-
+  },
+};
 
 
   return (
-    <FlexContainer>
-      {/* Doughnut Chart */}
+    <ChartContainer>
       <ChartWrapper>
         <Doughnut data={data} options={options} />
       </ChartWrapper>
-
-      {/* Text Section */}
+      {/* Text section */}
       <VerticalAlignContainer>
         <VerticalAlignContent>
-          <div style={{ color: "black" }}>
-            {newsTextAnalysis}
+          <div style={{height: '40px', color: 'black'}}>News Text Analysis</div>
+          <div style={{height: '40px'}}>
+            <NumberStat
+              value={newsTextAnalysis.metadata.sentencesAnalyzed}
+              label='Sentences Analyzed'
+            ></NumberStat>
           </div>
-
-          <div style={{ height: "40px" }}>
-            <NumberStat value={newsTextAnalysis.metadata.sentencesAnalyzed} 
-            label="Sentences Analyzed" />
-          </div>
-
-          <div style={{ height: "40px" }}>
-            <NumberStat value={newsTextAnalysis.metadata.wordAnalyzed} label="Words Analyzed" />
+          <div style={{height: '40px'}}>
+            <NumberStat
+              value={newsTextAnalysis.metadata.wordAnalyzed}
+              label='Words Analyzed'
+            ></NumberStat>
           </div>
         </VerticalAlignContent>
       </VerticalAlignContainer>
-    </FlexContainer>
+    </ChartContainer>
   );
 };
 
-export default NewsSentimentAnalysis;
+export default NewsSentimentAnalysis
