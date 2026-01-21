@@ -6,8 +6,15 @@ export async function analyzeStock(stockSymbolToAnalyze:  string) {
         alert('You must put in a ticker symbol before running the analysis')
         return 
     }
-    const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze;
-
+    // Localhost
+    // const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze;
+    // Subnet
+    // const url = 'http://192.168.43.143:5000/analyze-stock/' + stockSymbolToAnalyze;
+    // const url = 'https://adrenocorticotropic-tinctorially-zelda.ngrok-free.dev/analyze-stock/' + stockSymbolToAnalyze;
+    // Production
+    // const url = 'https://text-analysis-tool.onrender.com/analyze-stock/' + stockSymbolToAnalyze
+    const url = 'https://text-analysis-tool-jp9k.onrender.com/analyze-stock/' + stockSymbolToAnalyze;
+    
     const response = await fetch(url)
     if (!response.ok) {
         alert('There was a problem getting the analysis for your stock');
@@ -70,6 +77,7 @@ export const InputContainer = styled.div`
   width: fit-content;
   margin: 0 auto;
   display: flex;
+
 `
 
 export const AnalyzeInput = styled.div`
@@ -78,6 +86,7 @@ export const AnalyzeInput = styled.div`
   background: none;
   border: none;
   border-bottom: solid white 1px;
+    background-color:white
 `
 
 export const AnalyzeButton = styled.div`
