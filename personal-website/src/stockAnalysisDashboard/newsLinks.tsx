@@ -41,7 +41,7 @@ const NewsList: React.FC<NewsListProps> = ({ newsLinks }) => {
       <div style={{marginBottom: '10px', color: 'black'}}>In The News</div>
       <ScrollableList>
         {newsLinks.map((news) => (
-          <NewsItem>
+          <NewsItem key={news.link}>
             <NewsLink href={news.link} title={news.title} target='_blank' rel='noopener noreferrer'>
               {news.title}
             </NewsLink>

@@ -35,3 +35,23 @@ h1{color: var(--titleSectionPrimaryColor)}
     cursor: pointer;
     
 }
+.title-section-back-button {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: transparent;
+    color: rgb(203, 155, 203);
+    border: 2px solid rgb(203, 155, 203);
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: 'Armata';
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.title-section-back-button:hover {
+    background: white;
+    color: rgb(203, 155, 203);
+    border: 2px solid white;
+}

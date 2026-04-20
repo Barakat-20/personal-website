@@ -14,6 +14,7 @@
         <h1 class="title-section-header">Faidat</h1>
         <p class="title-section-subtitle">Welcome!</p>
         <button class="title-section-button" onclick="clickme()">click me</button>
+        <button class="title-section-back-button" id="title-back-button" onclick="goBack()">Back</button>
     </div>
     
     <div class="misc-section" id="aboutme">
@@ -155,12 +156,22 @@
 <script type="module" src="/src/main.tsx"></script>
 <script>
    function clickme() {
-      document.body.style.background = 'url("https://media.tenor.com/rIicIkDGPE8AAAA1/forrest-gump-on-my-way.webp")'
-        document.getElementById("title").style.visibility ="hidden";
-   }
+        document.getElementById("title").style.background = 'url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXEzZ2IzNDJ6MG1ubWk4bmVjcjI5MmQyMzI3aXJwZjVhNzJpbW9iaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/PF6e8Xq8dVnVX1BGLS/giphy.webp")';
+
+        document.querySelector(".title-section-header").style.visibility = "hidden";
+        document.querySelector(".title-section-subtitle").style.visibility = "hidden";
+        document.querySelector(".title-section-button").style.visibility = "hidden";
+
+        document.getElementById("title-back-button").style.display = "block";
+    }
+
+    function goBack() {
+        document.getElementById("title").style.background = '';
+
+        document.querySelector(".title-section-header").style.visibility = "visible";
+        document.querySelector(".title-section-subtitle").style.visibility = "visible";
+        document.querySelector(".title-section-button").style.visibility = "visible";
+
+        document.getElementById("title-back-button").style.display = "none";
+    }
 </script>
-
-
-
-<!-- <div id="root"></div>
-<script type="module" src="/src/main.tsx"></script> -->

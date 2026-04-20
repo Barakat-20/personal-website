@@ -64,7 +64,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             <div style={{ color: 'black', marginBottom: '10px' }}>
               <div>Future Earnings</div>
               {stockData.futureEarningsDates.map((nextDate: string) => (
-                <div>{nextDate}</div>
+                <div key={nextDate}>{nextDate}</div>
               ))}
             </div>
           </DashboardGridContent>
