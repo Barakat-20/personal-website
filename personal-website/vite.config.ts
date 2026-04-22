@@ -18,7 +18,7 @@ export default defineConfig({
           dest: './src/randomQuoteGenerator/'
         },
         {
-          src: './src/cv/Bade_Tola_CV - Copy.pdf',
+          src: './src/cv/faidat_egberinde_cv.pdf',
           dest: './src/cv/'
         },
       ],
